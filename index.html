@@ -1,0 +1,48 @@
+<?php
+// We need to use sessions, so you should always start sessions using the below code.
+session_start();
+// If the user is not logged in redirect to the login page...
+if (!isset($_SESSION['loggedin'])) {
+  header('Location: login/login.html');
+  exit;
+}
+?>
+
+<!DOCTYPE html>
+<html id="allHtml">
+
+<head>
+  <title>Cockpit EMRIS</title>
+  <link rel="stylesheet" href="design.css">
+  <link rel="icon" type="image/png" href="images/choice.png" />
+</head>
+
+<body>
+ 
+
+  <div id="header">
+    <select id="patientSelect" class="patientSelect"></select>
+  </div>
+  <div id="headerbar"></div>
+
+  <div id="navigationbar">
+
+  </div>
+  <div id="headerbar"></div>
+
+  <div id="maincontent">
+
+  </div>
+
+
+  <div id="footer">
+
+  </div>
+
+  <script src="js/index.js"></script>
+
+
+</body>
+
+
+</html>
